@@ -1,4 +1,4 @@
-package com.hsw.algorithm.baekjoon.Arrangement;
+package com.hsw.algorithm.baekjoon.arrangement;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
