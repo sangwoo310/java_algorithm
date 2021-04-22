@@ -1,6 +1,6 @@
 package com.hsw.algorithm.baekjoon.function;
 
-public class SelfNumbers {
+public class SelfNumbers_4673 {
     public static void main(String[] args) {
 
         boolean[] check = new boolean[10001];	// 1부터 10000이므로
