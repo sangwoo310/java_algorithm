@@ -3,74 +3,62 @@ package com.hsw.algorithm.baekjoon.characters;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class CharacterStudy_1157 {
-    /*
-    // 메모리 초과로 실패
     public static void main(String []args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine().toUpperCase();
 
-        boolean flag = false;
+        int top = 0;
+        char topStr = '?';
 
-        String topStr = "";
-        String tempStr = "";
-
-        int topCount = 0;
-        int tempCount = 0;
+        byte[] alphabetArr = new byte[26];
 
         for (int i=0; i<str.length(); i++) {
-            if (topCount == tempCount) {
-                flag = true;
-            } else if (topCount < tempCount) {
-                topStr = tempStr;
-                topCount = tempCount;
-                flag = false;
-            }
+            alphabetArr[(byte)str.charAt(i) - 65]++;
+        }
 
-            tempStr = Character.toString(str.charAt(i));
-            tempCount = 0;
-
-            if(str.length() == 1) {
-                topStr = tempStr;
-                break;
-            }
-
-            for (int k=i+1; k<str.length(); k++) {
-                if (tempStr.equals(Character.toString(str.charAt(k)))) {
-
-                    tempCount += 1;
-                }
+        for (int i=0; i<alphabetArr.length; i++) {
+            if (alphabetArr[i] > top) {
+                top = alphabetArr[i];
+                topStr = (char)(i + 65);
+            } else if (alphabetArr[i] == top) {
+                topStr = '?';
             }
         }
 
-        if (flag) {
-            System.out.println("?");
-        } else {
-            System.out.println(topStr);
+        System.out.println(topStr);
+    }
+    
+    /*
+    public static void main(String[] args) throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int[] arr = new int[26]; // 영문자의 개수는 26개임
+        String s = br.readLine();
+
+
+        for (int i = 0; i < s.length(); i++) {
+            if ('a' <= s.charAt(i) && s.charAt(i) <= 'z') {
+                arr[s.charAt(i) - 97]++;
+            } else {
+                arr[s.charAt(i) - 65]++;
+            }
         }
+        int max = -1;
+        char ch = '?';
+        for (int i = 0; i < 26; i++) {
+
+            if (arr[i] > max) {
+                max = arr[i];
+                ch = (char) (i + 65);
+            }
+            else if (arr[i] == max) {
+                ch = '?';
+            }
+        }
+        System.out.print(ch);
     }
     */
-
-    public static void main(String []args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        byte []strByte = br.readLine().toUpperCase().getBytes();
-        Arrays.sort(strByte);
-
-        String topStr = "";
-        String tempStr = "";
-
-        int topCount = 0;
-        int tempCount = 0;
-
-        for (int i=0; i<strByte.length; i++) {
-            if (topStr.equals(Character.toString((char) strByte[i]))) {
-                tempCount++;
-            } else {
-                topStr +=
-            }
-
-        }
-    }
 }
