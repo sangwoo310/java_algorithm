@@ -12,7 +12,7 @@ public class CharacterStudy_1157 {
         int top = 0;
         char topStr = '?';
 
-        // byte 로 받을경우 100000가지 수에서 overflow 발생으로 실패
+        // byte 로 받을경우 2^8만 받을수있어서 문제 조건에서 100000가지 이상일경우이기에 overflow 발생으로 실패
         int[] alphabetArr = new int[26];
 
         for (int i=0; i<str.length(); i++) {
