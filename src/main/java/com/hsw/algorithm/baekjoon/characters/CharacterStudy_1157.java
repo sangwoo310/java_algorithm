@@ -12,7 +12,8 @@ public class CharacterStudy_1157 {
         int top = 0;
         char topStr = '?';
 
-        byte[] alphabetArr = new byte[26];
+        // byte 로 받을경우 100000가지 수에서 overflow 발생으로 실패
+        int[] alphabetArr = new int[26];
 
         for (int i=0; i<str.length(); i++) {
             alphabetArr[(byte)str.charAt(i) - 65]++;
@@ -29,7 +30,7 @@ public class CharacterStudy_1157 {
 
         System.out.println(topStr);
     }
-    
+
     /*
     public static void main(String[] args) throws IOException{
 
