@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class OxQuiz_8958 {
-    public static void main(String []args) throws Exception {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int loopCount = Integer.parseInt(br.readLine());
@@ -20,7 +20,7 @@ public class OxQuiz_8958 {
             totalScore = 0;
             score = 0;
 
-            for (int i=0; i<quiz.length(); i++) {
+            for (int i = 0; i < quiz.length(); i++) {
                 if (Character.toString(quiz.charAt(i)).equals("O")) {
                     score += 1;
                     totalScore += score;
@@ -32,7 +32,7 @@ public class OxQuiz_8958 {
             count++;
         }
 
-        for (int i=0; i<loopCount; i++) {
+        for (int i = 0; i < loopCount; i++) {
             System.out.println(result[i]);
         }
     }

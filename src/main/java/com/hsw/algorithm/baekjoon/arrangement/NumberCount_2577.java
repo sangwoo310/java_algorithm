@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class NumberCount_2577 {
-    public static void main(String []args) throws Exception {
+    public static void main(String[] args) throws Exception {
         /*
         // 일반적이지만 느리다
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

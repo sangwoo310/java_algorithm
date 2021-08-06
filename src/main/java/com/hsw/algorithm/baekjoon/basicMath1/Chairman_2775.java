@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Chairman_2775 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int testCount = Integer.parseInt(br.readLine());
 
@@ -13,23 +13,23 @@ public class Chairman_2775 {
 
         int[][] arr = new int[16][15];
 
-        for (int i=0; i<arr.length; i++) {
-            for (int k=0; k<arr[i].length; k++) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int k = 0; k < arr[i].length; k++) {
                 if (i == 0) {
-                    arr[0][k] = k+1;
+                    arr[0][k] = k + 1;
                 } else if (k == 0) {
                     arr[i][0] = 1;
                 } else {
-                    arr[i][k] = arr[i][k-1] + arr[i-1][k];
+                    arr[i][k] = arr[i][k - 1] + arr[i - 1][k];
                 }
             }
         }
 
-        for (int i=0; i<testCount; i++) {
+        for (int i = 0; i < testCount; i++) {
             int floor = Integer.parseInt(br.readLine());
             int number = Integer.parseInt(br.readLine());
 
-            sb.append(arr[floor][number-1]).append("\n");
+            sb.append(arr[floor][number - 1]).append("\n");
         }
 
         System.out.println(sb);

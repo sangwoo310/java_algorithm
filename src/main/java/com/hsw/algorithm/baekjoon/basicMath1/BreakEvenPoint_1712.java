@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class BreakEvenPoint_1712 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -16,10 +16,10 @@ public class BreakEvenPoint_1712 {
 
         int count = 0;
 
-        if(C-B <= 0) {
+        if (C - B <= 0) {
             count = -1;
         } else {
-            count = A/(C-B) + 1;
+            count = A / (C - B) + 1;
         }
 
         System.out.println(count);

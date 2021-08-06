@@ -7,7 +7,7 @@ import java.math.BigInteger;
 import java.util.StringTokenizer;
 
 public class BigNumber_10757 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 

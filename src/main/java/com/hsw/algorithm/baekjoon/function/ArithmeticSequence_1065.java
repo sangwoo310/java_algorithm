@@ -14,8 +14,8 @@ public class ArithmeticSequence_1065 {
 
         int count = 0;
 
-        for (int i=1; i<=inputData; i++) {
-            if(mathFunc(i)) {
+        for (int i = 1; i <= inputData; i++) {
+            if (mathFunc(i)) {
                 count += 1;
             }
         }
@@ -24,7 +24,7 @@ public class ArithmeticSequence_1065 {
     }
 
     public static boolean mathFunc(int n) {
-        if (n<100) {
+        if (n < 100) {
             return true;
         }
 
@@ -36,14 +36,14 @@ public class ArithmeticSequence_1065 {
 
         while (number != 0) {
             num2 = num1;
-            num1 = number%10;
+            num1 = number % 10;
 
-            if (count == 2 && num2-num1 != dif) {
+            if (count == 2 && num2 - num1 != dif) {
                 return false;
             }
 
             dif = num2 - num1;
-            number = number/10;
+            number = number / 10;
             count++;
         }
 

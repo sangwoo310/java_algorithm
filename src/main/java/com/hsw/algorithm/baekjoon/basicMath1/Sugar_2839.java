@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Sugar_2839 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
@@ -21,7 +21,7 @@ public class Sugar_2839 {
                     break;
                 }
                 if (left % 3 == 0) {
-                    System.out.println(bag5 + left/3);
+                    System.out.println(bag5 + left / 3);
                     break;
                 }
 

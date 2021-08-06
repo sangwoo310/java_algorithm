@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class CharacterStudy_1157 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine().toUpperCase();
 
@@ -15,14 +15,14 @@ public class CharacterStudy_1157 {
         // byte 로 받을경우 2^8만 받을수있어서 문제 조건에서 100000가지 이상일경우이기에 overflow 발생으로 실패
         int[] alphabetArr = new int[26];
 
-        for (int i=0; i<str.length(); i++) {
-            alphabetArr[(byte)str.charAt(i) - 65]++;
+        for (int i = 0; i < str.length(); i++) {
+            alphabetArr[(byte) str.charAt(i) - 65]++;
         }
 
-        for (int i=0; i<alphabetArr.length; i++) {
+        for (int i = 0; i < alphabetArr.length; i++) {
             if (alphabetArr[i] > top) {
                 top = alphabetArr[i];
-                topStr = (char)(i + 65);
+                topStr = (char) (i + 65);
             } else if (alphabetArr[i] == top) {
                 topStr = '?';
             }

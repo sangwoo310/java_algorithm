@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Theorem_4948 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         while (true) {
@@ -15,7 +15,7 @@ public class Theorem_4948 {
                 break;
             }
 
-            for (int i=num+1; i<=num*2; i++) {
+            for (int i = num + 1; i <= num * 2; i++) {
                 if (isPrime(i)) {
                     count++;
                 }
@@ -29,8 +29,8 @@ public class Theorem_4948 {
             return false;
         }
 
-        for (int i=2; i<=Math.sqrt(num); i++) {
-            if (num%i == 0) {
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
                 return false;
             }
         }

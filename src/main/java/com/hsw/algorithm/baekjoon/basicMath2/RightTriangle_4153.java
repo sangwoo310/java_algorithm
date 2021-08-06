@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class RightTriangle_4153 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         while (true) {
@@ -23,7 +23,7 @@ public class RightTriangle_4153 {
             }
 
             Arrays.sort(arr);
-            if (arr[0]*arr[0] + arr[1]*arr[1] == arr[2]*arr[2]) {
+            if (arr[0] * arr[0] + arr[1] * arr[1] == arr[2] * arr[2]) {
                 System.out.println("right");
             } else {
                 System.out.println("wrong");

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class FractionNum_1193 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int X = Integer.parseInt(br.readLine());
 
@@ -22,9 +22,9 @@ public class FractionNum_1193 {
             int dif = range - X;
 
             if (count % 2 == 1) {
-                System.out.println((1+dif) + "/" + (count-dif));
+                System.out.println((1 + dif) + "/" + (count - dif));
             } else {
-                System.out.println((count-dif) + "/" + (1+dif));
+                System.out.println((count - dif) + "/" + (1 + dif));
             }
         }
     }

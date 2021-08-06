@@ -10,7 +10,7 @@ public class DecompositionSum_2231 {
         int N = Integer.parseInt(br.readLine());
         int result = 0;
 
-        for (int i = 0; i<N; i++) {
+        for (int i = 0; i < N; i++) {
             int number = i;
             int temp = 0;
 

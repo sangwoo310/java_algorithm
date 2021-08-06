@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class MinMax_10818 {
-    public static void main(String []args) throws Exception {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
@@ -14,7 +14,7 @@ public class MinMax_10818 {
 
         int[] arr = new int[n];
 
-        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
         while (st.hasMoreTokens()) {
             arr[index] = Integer.parseInt(st.nextToken());
@@ -24,6 +24,6 @@ public class MinMax_10818 {
 
         Arrays.sort(arr);
 
-        System.out.println(arr[0] + " " + arr[n-1]);
+        System.out.println(arr[0] + " " + arr[n - 1]);
     }
 }

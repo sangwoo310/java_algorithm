@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Average_1546 {
-    public static void main(String []args) throws Exception {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int count = Integer.parseInt(br.readLine());
@@ -15,7 +15,7 @@ public class Average_1546 {
         int[] arr = new int[count];
         double average = 0;
 
-        for(int i=0; i<count; i++) {
+        for (int i = 0; i < count; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
@@ -25,6 +25,6 @@ public class Average_1546 {
             average += i / (double) arr[arr.length - 1] * 100;
         }
 
-        System.out.println(average/count);
+        System.out.println(average / count);
     }
 }

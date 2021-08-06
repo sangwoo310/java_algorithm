@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class PrimeNumber_2581 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int M = Integer.parseInt(br.readLine());
         int N = Integer.parseInt(br.readLine());
@@ -13,7 +13,7 @@ public class PrimeNumber_2581 {
         int min = 0;
         int total = 0;
 
-        for (int i=M; i<=N; i++) {
+        for (int i = M; i <= N; i++) {
             if (isPrime(i)) {
                 if (min == 0) {
                     min = i;
@@ -36,8 +36,8 @@ public class PrimeNumber_2581 {
             return false;
         }
 
-        for (int i=2; i<num; i++) {
-            if (num%i == 0) {
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
                 return false;
             }
         }

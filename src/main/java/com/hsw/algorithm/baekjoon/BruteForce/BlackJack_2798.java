@@ -34,13 +34,13 @@ public class BlackJack_2798 {
         for (int i = 0; i < N - 2; i++) {
 
             // 첫 번째 카드가 M 보다 크면 skip
-            if(arr[i] > M) continue;
+            if (arr[i] > M) continue;
 
             // 두 번째 카드는 첫 번째 카드 다음부터 N - 1 까지만 순회
             for (int j = i + 1; j < N - 1; j++) {
 
                 // 두 번째 카드와 첫 번째 카드의 합이 M보다 크면 skip
-                if(arr[i] + arr[j] > M) continue;
+                if (arr[i] + arr[j] > M) continue;
 
                 // 세 번째 카드는 두 번째 카드 다음부터 N 까지 순회
                 for (int k = j + 1; k < N; k++) {
@@ -54,7 +54,7 @@ public class BlackJack_2798 {
                     }
 
                     // 세 카드의 합이 이전 합보다 크면서 M 보다 작을 경우 result 갱신
-                    if(result < temp && temp < M) {
+                    if (result < temp && temp < M) {
                         result = temp;
                     }
                 }

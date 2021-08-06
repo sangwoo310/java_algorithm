@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Filip_2908 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -16,7 +16,7 @@ public class Filip_2908 {
         String val1 = "";
         String val2 = "";
 
-        for (int i=2; i>=0; i--) {
+        for (int i = 2; i >= 0; i--) {
             val1 += Character.toString(input1.charAt(i));
             val2 += Character.toString(input2.charAt(i));
         }

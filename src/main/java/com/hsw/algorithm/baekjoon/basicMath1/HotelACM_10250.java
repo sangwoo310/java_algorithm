@@ -6,13 +6,13 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class HotelACM_10250 {
-    public static void main(String []args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int count = Integer.parseInt(br.readLine());
 
         String[] result = new String[count];
 
-        for (int i=0; i<count; i++) {
+        for (int i = 0; i < count; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int H = Integer.parseInt(st.nextToken());
             int W = Integer.parseInt(st.nextToken());
@@ -30,7 +30,7 @@ public class HotelACM_10250 {
             result[i] = floor + padding(W, number);
         }
 
-        for (int i=0; i<result.length; i++) {
+        for (int i = 0; i < result.length; i++) {
             System.out.println(result[i]);
         }
     }
@@ -41,7 +41,7 @@ public class HotelACM_10250 {
         int paddingCount = (int) Math.log10(w) + 1;
         int originCount = (int) Math.log10(number) + 1;
 
-        for (int i=0; i<paddingCount-originCount; i++) {
+        for (int i = 0; i < paddingCount - originCount; i++) {
             paddingStr += "0";
         }
         paddingStr += number;

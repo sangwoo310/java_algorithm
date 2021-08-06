@@ -15,8 +15,8 @@ public class FibonacciSequence_10870 {
 
     // 피보나치 함수
     static int fibonacci(int N) {
-        if (N == 0)	return 0;
-        if (N == 1)	return 1;
+        if (N == 0) return 0;
+        if (N == 1) return 1;
         return fibonacci(N - 1) + fibonacci(N - 2);
     }
 }
