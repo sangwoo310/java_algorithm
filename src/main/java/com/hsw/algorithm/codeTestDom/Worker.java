@@ -35,7 +35,15 @@ public class Worker {
         if (w == null)
             throw new IllegalArgumentException();
 
-        w.close();
+//        w.close();
+
+
+        //////////////////
+//        w.getTasks().clear();
+//        w.getTasks().remove(1);
+        taskResources.remove(id);
+
+        //////////////////
     }
 
     public class TaskResource implements AutoCloseable {
@@ -72,9 +80,20 @@ public class Worker {
         Worker d = new Worker();
 
         d.acquireTaskResource(1).doTask("Task11");
+
+
+        //////////////////
+        System.out.println(d.getTaskResources());
+        //////////////////
+
         d.acquireTaskResource(2).doTask("Task21");
         System.out.println(String.join(", ", d.acquireTaskResource(2).getTasks()));
         d.releaseTaskResource(2);
+
+        ///////////////////
+        System.out.println(d.getTaskResources());
+        //////////////////
+
         d.acquireTaskResource(1).doTask("Task12");
         System.out.println(String.join(", ", d.acquireTaskResource(1).getTasks()));
         d.releaseTaskResource(1);

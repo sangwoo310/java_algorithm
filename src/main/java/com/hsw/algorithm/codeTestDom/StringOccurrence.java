@@ -1,7 +1,5 @@
 package com.hsw.algorithm.codeTestDom;
 
-import com.oracle.tools.packager.IOUtils;
-
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
@@ -18,39 +16,26 @@ import java.io.InputStream;
 
 public class StringOccurrence {
     public static int getOccurrenceCount(String toSearch, InputStream stream) throws Exception {
-        throw new UnsupportedOperationException("Waiting to be implemented.");
+
+//        throw new UnsupportedOperationException("Waiting to be implemented.");
 
 
 
 
+        final byte[] bytes;
+        bytes = stream.readAllBytes();
+        String data = new String(bytes);
 
-        /*
-        // inputStream to byte Array
-         final byte[] bytes;
-         try (inputStream) {
-             bytes = inputStream.readAllBytes();
-         }
-         */
+        String[] splitStr = data.split("\n");
 
-//        stream.writ
-//
-//        byte[] bytes = ByteStreams.toByteArray(inputStream);
-
-
-        /*
-        String a[] = str.split(" ");
-
-        // search for pattern in a
         int count = 0;
-        for (int i = 0; i < a.length; i++)
-        {
-            // if match found increase count
-            if (word.equals(a[i]))
+        for (String s : splitStr) {
+            if (s.contains(toSearch)) {
                 count++;
+            }
         }
 
         return count;
-        */
     }
 
     public static void main(String[] args) throws Exception {

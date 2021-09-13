@@ -1,12 +1,13 @@
 package com.hsw.algorithm.codeTestDom;
 
 /**
- *  A test method for the basic case, shelfCanAcceptAndReturnItem, has already been created. Each of the testcase methods
+ *  A test method for the basic case, shelfCanAcceptAndReturnItem, has already been created. Each of the test case methods
  *  should be in the ShelfTester class and have Test attributes.
  */
 
 // import org.junit.Assert;
 // import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ShelfTest {
@@ -15,13 +16,43 @@ public class ShelfTest {
     public void shelfCanAcceptAdnReturnItem() {
         Shelf shelf = new Shelf();
         shelf.put("Orange");
-//        Assert.assetTrue(sxhelf.take("Orange"));
+//        Assert.assetTrue(shelf.take("Orange"));
 
 
 
-//        System.out.println(shelf.take("Orange"));
-//        System.out.println(shelf.take("Orange"));
-//        shelf.put(null);
-//        shelf.take(null);
+
+
+        Assertions.assertTrue(shelf.take("Orange"));
+
+    }
+
+
+    @Test
+    public void shelfCanNotAcceptNullAndNullString() {
+        Shelf shelf = new Shelf();
+
+        shelf.put(null);
+        Assertions.assertTrue(!shelf.take(null));
+        shelf.take("");
+        Assertions.assertTrue(!shelf.take(""));
+    }
+
+    @Test
+    public void shelfCanAcceptTakeOnce() {
+        Shelf shelf = new Shelf();
+
+        shelf.put("Apple");
+        Assertions.assertTrue(shelf.take("Apple"));
+        Assertions.assertTrue(!shelf.take("Apple"));
+    }
+
+    @Test
+    public void shelfCanAcceptDuplicateItem() {
+        Shelf shelf = new Shelf();
+
+        shelf.put("Apple");
+        shelf.put("Apple");
+        Assertions.assertTrue(shelf.take("Apple"));
+        Assertions.assertTrue(shelf.take("Apple"));
     }
 }
