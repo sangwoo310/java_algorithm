@@ -2,6 +2,7 @@ package com.hsw.algorithm.codeTestDom;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.StringTokenizer;
 
 /**
  * Implement the function getOccurrenceCount, which returns the number of lines from the InputStream that contain text matching the provided String.
@@ -26,11 +27,22 @@ public class StringOccurrence {
         bytes = stream.readAllBytes();
         String data = new String(bytes);
 
+        /*
         String[] splitStr = data.split("\n");
 
         int count = 0;
         for (String s : splitStr) {
             if (s.contains(toSearch)) {
+                count++;
+            }
+        }
+        */
+
+        StringTokenizer st = new StringTokenizer(data, "\n");
+
+        int count = 0;
+        while (st.hasMoreTokens()) {
+            if(st.nextToken().contains(toSearch)) {
                 count++;
             }
         }
