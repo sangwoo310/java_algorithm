@@ -33,7 +33,7 @@ public class ShelfTest {
 
         shelf.put(null);
         Assertions.assertTrue(!shelf.take(null));
-        shelf.take("");
+        shelf.put("");
         Assertions.assertTrue(!shelf.take(""));
     }
 
