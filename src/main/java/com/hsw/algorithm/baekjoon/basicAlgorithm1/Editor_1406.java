@@ -44,8 +44,10 @@ public class Editor_1406 {
     System.out.println(base);
   }
 
-  // BufferedWriter 를 사용안하고 94번째 라인에서 System.print()를 사용하면 시간초과가 발생한다.
-  // 이유는 BufferedWriter 는 버퍼를 사용하기 때문에 한번에 출력을 하기 때문에 시간을 단축시킬 수 있다.
+  /*
+   * BufferedWriter 를 사용안하고 94번째 라인에서 System.print()를 사용하면 시간초과가 발생한다.
+   * 이유는 BufferedWriter 는 버퍼를 사용하기 때문에 한번에 출력을 하기 때문에 시간을 단축시킬 수 있다.
+  */
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
