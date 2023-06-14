@@ -1,4 +1,4 @@
-package com.hsw.algorithm.baekjoon.basicAlgorithm1;
+package com.hsw.algorithm.baekjoon.basicAlgorithm1.dataStructre1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
