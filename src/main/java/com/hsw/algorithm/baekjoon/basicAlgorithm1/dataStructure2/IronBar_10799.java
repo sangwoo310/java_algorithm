@@ -3,6 +3,10 @@ package com.hsw.algorithm.baekjoon.basicAlgorithm1.dataStructure2;
 import java.io.*;
 import java.util.Stack;
 
+/**
+ * 레이저로 자를때마다 레이저 왼쪽에 있는 갯수가 stack 갯수이다.
+ * 막대기가 종료될때는 한개씩만 늘리면 된다
+ */
 public class IronBar_10799 {
   public static void main(String[] args) throws IOException {
     // TODO Auto-generated method stub
