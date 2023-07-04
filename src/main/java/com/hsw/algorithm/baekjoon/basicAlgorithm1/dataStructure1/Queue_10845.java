@@ -1,4 +1,4 @@
-package com.hsw.algorithm.baekjoon.basicAlgorithm1.dataStructre1;
+package com.hsw.algorithm.baekjoon.basicAlgorithm1.dataStructure1;
 
 import java.io.*;
 import java.util.LinkedList;
