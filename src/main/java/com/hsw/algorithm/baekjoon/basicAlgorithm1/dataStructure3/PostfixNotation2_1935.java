@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Stack;
 
-public class PostfixNotation_1935 {
+public class PostfixNotation2_1935 {
   /**
    * 후위표현식은 Stack 을 통해 일반 숫자일경우 Push 연산자일경우 Pop 을 사용하여 계산
    * 여기서는 char 타입의 값을 처리하는 방법에 대해 잘 써야한다
