@@ -3,7 +3,7 @@ package com.hsw.algorithm.baekjoon.basicAlgorithm1.math1;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class FindDecimal_1929 {
+public class FindPrimeNumber_1929 {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -13,7 +13,7 @@ public class FindDecimal_1929 {
     int N = Integer.parseInt(st.nextToken());
 
     for (int i=M; i<=N; i++) {
-      if (isDecimal(i)) {
+      if (isPrimeNum(i)) {
         bw.write(i + "\n");
       }
     }
@@ -22,7 +22,7 @@ public class FindDecimal_1929 {
     bw.close();
   }
 
-  public static boolean isDecimal(int a) {
+  private static boolean isPrimeNum(int a) {
     if (a == 1) {
       return false;
     }
