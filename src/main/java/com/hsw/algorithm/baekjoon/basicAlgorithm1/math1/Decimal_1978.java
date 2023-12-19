@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * 제곱근을 활용하게되면 O(√N) 이 된다!
  *
  * 제곱근보다 높은수는 결국 약수이다 -> 반복문을 자신의 값만큼 돌리는게 아니라 제곱근까지 돌린다
- * for(int i=2; i<a; i++) -> for(int i=2; i<Math.sqrt(a); i++) 로 돌리면 된다!
+ * for(int i=2; i<a; i++) -> for(int i=2; i<=Math.sqrt(a); i++) 로 돌리면 된다!
  */
 public class Decimal_1978 {
   public static void main(String[] args) throws IOException {
