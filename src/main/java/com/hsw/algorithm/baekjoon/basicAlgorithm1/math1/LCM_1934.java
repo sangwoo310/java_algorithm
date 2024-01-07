@@ -16,19 +16,19 @@ public class LCM_1934 {
       int a = Integer.parseInt(st.nextToken());
       int b = Integer.parseInt(st.nextToken());
 
-      int bcd = bcd(a, b);
+      int gcdVal = gcd(a, b);
 
-      bw.write((a * b)/bcd + "\n");
+      bw.write((a * b)/gcdVal + "\n");
     }
 
     bw.flush();
   }
 
-  public static int bcd(int a, int b) {
+  public static int gcd(int a, int b) {
     if(b == 0) {
       return a;
     }
 
-    return bcd(b, a%b);
+    return gcd(b, a%b);
   }
 }
