@@ -1,4 +1,4 @@
-package com.hsw.algorithm.datastructure;
+package com.hsw.datastructure;
 
 import java.util.Queue;
 
