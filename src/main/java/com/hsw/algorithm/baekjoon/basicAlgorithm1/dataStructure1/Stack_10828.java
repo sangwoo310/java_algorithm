@@ -8,8 +8,8 @@ import java.util.StringTokenizer;
 
 public class Stack_10828 {
   public static void main(String[] args) throws IOException {
-    BufferedReader br    = new BufferedReader(new InputStreamReader(System.in));
-    StringBuilder  sb    = new StringBuilder();
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringBuilder sb = new StringBuilder();
     int n = Integer.parseInt(br.readLine());
 
     Stack<Integer> stack = new Stack<>();

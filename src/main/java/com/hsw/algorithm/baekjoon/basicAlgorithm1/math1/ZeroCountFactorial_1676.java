@@ -19,25 +19,29 @@ import java.util.Stack;
  * 5의 개수는 2개이고 뒤에 0의 자리가연속해서 나오는 개수는 2
  */
 public class ZeroCountFactorial_1676 {
-  /** 소인수를 활용한 문제 풀이 **/
+  /**
+   * 소인수를 활용한 문제 풀이
+   **/
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int N = Integer.parseInt(br.readLine());
 
     int count = 0;
-    for (int i=1; i<=N; i++) {
+    for (int i = 1; i <= N; i++) {
       int num = i;
 
       while (num % 5 == 0) {
         count++;
-        num/=5;
+        num /= 5;
       }
     }
 
     System.out.println(count);
   }
 
-  /** BigInteger 를 활용한 문제 풀이 **/
+  /**
+   * BigInteger 를 활용한 문제 풀이
+   **/
   public static void userBigInteger() throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int N = Integer.parseInt(br.readLine());
@@ -50,7 +54,7 @@ public class ZeroCountFactorial_1676 {
 
     Stack<Character> stack = new Stack<>();
     String strValue = String.valueOf(value);
-    for (int i=0; i<strValue.length(); i++) {
+    for (int i = 0; i < strValue.length(); i++) {
       stack.push(strValue.charAt(i));
     }
 

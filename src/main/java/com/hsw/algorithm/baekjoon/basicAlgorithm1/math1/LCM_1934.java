@@ -10,7 +10,7 @@ public class LCM_1934 {
 
     int N = Integer.parseInt(br.readLine());
 
-    for(int i=0; i<N; i++) {
+    for (int i = 0; i < N; i++) {
       StringTokenizer st = new StringTokenizer(br.readLine());
 
       int a = Integer.parseInt(st.nextToken());
@@ -18,17 +18,17 @@ public class LCM_1934 {
 
       int gcdVal = gcd(a, b);
 
-      bw.write((a * b)/gcdVal + "\n");
+      bw.write((a * b) / gcdVal + "\n");
     }
 
     bw.flush();
   }
 
   public static int gcd(int a, int b) {
-    if(b == 0) {
+    if (b == 0) {
       return a;
     }
 
-    return gcd(b, a%b);
+    return gcd(b, a % b);
   }
 }

@@ -22,19 +22,19 @@ public class Editor_1406 {
       String cmd = command.nextToken();
 
       if (cmd.equals("L")) {
-        if(cursor != 0) {
+        if (cursor != 0) {
           cursor--;
         }
-      } else if(cmd.equals("D")) {
+      } else if (cmd.equals("D")) {
         if (cursor != base.length()) {
           cursor++;
         }
-      } else if(cmd.equals("B")) {
+      } else if (cmd.equals("B")) {
         if (cursor != 0) {
-          base.deleteCharAt(cursor-1);
+          base.deleteCharAt(cursor - 1);
           cursor--;
         }
-      } else if(cmd.equals("P")) {
+      } else if (cmd.equals("P")) {
         String add = command.nextToken();
         base.insert(cursor, add);
         cursor++;
@@ -47,7 +47,7 @@ public class Editor_1406 {
   /*
    * BufferedWriter 를 사용안하고 94번째 라인에서 System.print()를 사용하면 시간초과가 발생한다.
    * 이유는 BufferedWriter 는 버퍼를 사용하기 때문에 한번에 출력을 하기 때문에 시간을 단축시킬 수 있다.
-  */
+   */
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -62,18 +62,18 @@ public class Editor_1406 {
       leftStack.push(String.valueOf(baseStr.charAt(i)));
     }
 
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
       StringTokenizer command = new StringTokenizer(br.readLine());
       String cmd = command.nextToken();
 
       switch (cmd) {
         case "L":
-          if(!leftStack.empty()) {
+          if (!leftStack.empty()) {
             rightStack.push(leftStack.pop());
           }
           break;
         case "D":
-          if(!rightStack.empty()) {
+          if (!rightStack.empty()) {
             leftStack.push(rightStack.pop());
           }
           break;

@@ -20,7 +20,7 @@ public class Deque_10866 {
 
     StringBuilder sb = new StringBuilder();
 
-    while(N-- > 0) {
+    while (N-- > 0) {
       StringTokenizer st = new StringTokenizer(br.readLine());
       switch (st.nextToken()) {
         case "push_front":

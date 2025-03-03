@@ -12,7 +12,7 @@ public class FindPrimeNumber_1929 {
     int M = Integer.parseInt(st.nextToken());
     int N = Integer.parseInt(st.nextToken());
 
-    for (int i=M; i<=N; i++) {
+    for (int i = M; i <= N; i++) {
       if (isPrimeNum(i)) {
         bw.write(i + "\n");
       }
@@ -27,7 +27,7 @@ public class FindPrimeNumber_1929 {
       return false;
     }
 
-    for (int i=2; i<=Math.sqrt(a); i++) {
+    for (int i = 2; i <= Math.sqrt(a); i++) {
       if (a % i == 0) {
         return false;
       }

@@ -19,8 +19,8 @@ public class NGF_17299 {
     int[] seq = new int[N];
 
     StringTokenizer st = new StringTokenizer(br.readLine());
-    for(int i=0; i<N; i++) {
-        seq[i] = Integer.parseInt(st.nextToken());
+    for (int i = 0; i < N; i++) {
+      seq[i] = Integer.parseInt(st.nextToken());
     }
 
     HashMap<Integer, Integer> countMap = new HashMap<>();
@@ -35,7 +35,7 @@ public class NGF_17299 {
     }
 
     Stack<Integer> stack = new Stack<>();
-    for(int i=0; i<N; i++) {
+    for (int i = 0; i < N; i++) {
       while (!stack.isEmpty() && seqCount[i] > seqCount[stack.peek()]) {
         seq[stack.pop()] = seq[i];
       }

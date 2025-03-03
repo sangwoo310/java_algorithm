@@ -10,18 +10,18 @@ public class GcdSum_9613 {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int t = Integer.parseInt(br.readLine());
 
-    for (int i=0; i<t; i++) {
+    for (int i = 0; i < t; i++) {
       StringTokenizer st = new StringTokenizer(br.readLine());
       int n = Integer.parseInt(st.nextToken());
       long sum = 0;
 
       int[] candidateArr = new int[n];
-      for (int k=0; k<n; k++) {
+      for (int k = 0; k < n; k++) {
         candidateArr[k] = Integer.parseInt(st.nextToken());
       }
 
-      for (int k=0; k<n; k++) {
-        for (int j=k+1; j<n; j++) {
+      for (int k = 0; k < n; k++) {
+        for (int j = k + 1; j < n; j++) {
           sum += gcd(candidateArr[k], candidateArr[j]);
         }
       }
@@ -31,10 +31,10 @@ public class GcdSum_9613 {
   }
 
   public static int gcd(int a, int b) {
-    if(b == 0) {
+    if (b == 0) {
       return a;
     }
 
-    return gcd(b, a%b);
+    return gcd(b, a % b);
   }
 }

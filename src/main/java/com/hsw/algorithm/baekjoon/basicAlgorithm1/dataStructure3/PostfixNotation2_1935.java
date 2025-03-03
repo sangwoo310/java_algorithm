@@ -19,8 +19,8 @@ public class PostfixNotation2_1935 {
     char[] operand = br.readLine().toCharArray();
 
     HashMap<Character, Double> hashMap = new HashMap<>();
-    for(int i=0; i<N; i++) {
-      hashMap.put((char)(65+i), Double.valueOf(br.readLine()));
+    for (int i = 0; i < N; i++) {
+      hashMap.put((char) (65 + i), Double.valueOf(br.readLine()));
     }
 
     for (char c : operand) {

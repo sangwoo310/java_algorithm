@@ -23,7 +23,7 @@ public class HideAndSeek_17087 {
     st = new StringTokenizer(br.readLine());
 
     long[] arr = new long[N];
-    for (int i=0; i<N; i++) {
+    for (int i = 0; i < N; i++) {
       arr[i] = Math.abs(S - Long.parseLong(st.nextToken()));
     }
 
@@ -36,10 +36,10 @@ public class HideAndSeek_17087 {
   }
 
   public static long gcd(long a, long b) {
-    if(b == 0) {
+    if (b == 0) {
       return a;
     }
 
-    return gcd(b, a%b);
+    return gcd(b, a % b);
   }
 }

@@ -16,18 +16,18 @@ public class Parenthesis_9012 {
 
     Boolean flag = true;
 
-    for(int i=0; i<n; i++) {
+    for (int i = 0; i < n; i++) {
       stack.clear();
 
       String str = br.readLine();
 
-      for(int k=0; k<str.length(); k++) {
+      for (int k = 0; k < str.length(); k++) {
         Character charAt = str.charAt(k);
 
-        if(charAt == '(') {
+        if (charAt == '(') {
           stack.push("(");
         } else if (charAt == ')') {
-          if(stack.empty()) {
+          if (stack.empty()) {
             flag = false;
             break;
           } else {

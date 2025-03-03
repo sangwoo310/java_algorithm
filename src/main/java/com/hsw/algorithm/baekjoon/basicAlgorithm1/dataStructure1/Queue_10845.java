@@ -35,8 +35,8 @@ public class Queue_10845 {
           break;
         case "size":
           /*
-          * bufferedWriter 는 버퍼로 저장되기 int 값을 넣게 되면 값이 다른값이 저장됨
-          */
+           * bufferedWriter 는 버퍼로 저장되기 int 값을 넣게 되면 값이 다른값이 저장됨
+           */
           bw.write(queue.size() + "");
           bw.newLine();
           break;

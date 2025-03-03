@@ -13,10 +13,10 @@ public class Remainder_10430 {
     int c = Integer.parseInt(st.nextToken());
 
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    bw.write((a+b)%c + "\n");
-    bw.write(((a%c)+(b%c))%c + "\n");
-    bw.write(((a*b)%c) + "\n");
-    bw.write(((a%c)*(b%c))%c + "\n");
+    bw.write((a + b) % c + "\n");
+    bw.write(((a % c) + (b % c)) % c + "\n");
+    bw.write(((a * b) % c) + "\n");
+    bw.write(((a % c) * (b % c)) % c + "\n");
     bw.flush();
   }
 }

@@ -13,16 +13,16 @@ public class AlphabetSearch_10809 {
     int[] alphabetArr = new int[26];
     Arrays.fill(alphabetArr, -1);
 
-    for (int i=0; i<str.length(); i++) {
+    for (int i = 0; i < str.length(); i++) {
       int alphabet = str.charAt(i);
 
-      if(alphabetArr[alphabet - 97] == -1) {
+      if (alphabetArr[alphabet - 97] == -1) {
         alphabetArr[alphabet - 97] = i;
       }
     }
 
     StringBuilder sb = new StringBuilder();
-    for (int a: alphabetArr) {
+    for (int a : alphabetArr) {
       sb.append(a).append(" ");
     }
 

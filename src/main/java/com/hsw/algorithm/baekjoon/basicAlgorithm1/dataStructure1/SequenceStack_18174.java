@@ -17,13 +17,13 @@ public class SequenceStack_18174 {
     while (n-- > 0) {
       int num = Integer.parseInt(br.readLine());
 
-      if(num > startNum) {
-        for(int i=startNum+1; i<=num; i++) {
+      if (num > startNum) {
+        for (int i = startNum + 1; i <= num; i++) {
           sb.append("+").append("\n");
           stack.push(i);
         }
         startNum = num;
-      } else if(stack.peek() != num) {
+      } else if (stack.peek() != num) {
         System.out.println("NO");
         return;
       }

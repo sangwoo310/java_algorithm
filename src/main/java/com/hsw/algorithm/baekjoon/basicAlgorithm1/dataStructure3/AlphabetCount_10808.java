@@ -11,7 +11,7 @@ public class AlphabetCount_10808 {
 
     int[] alphabetArr = new int[26];
 
-    for(int i=0; i<str.length(); i++) {
+    for (int i = 0; i < str.length(); i++) {
       int alphabet = str.charAt(i);
       alphabetArr[alphabet - 97] += 1;
     }

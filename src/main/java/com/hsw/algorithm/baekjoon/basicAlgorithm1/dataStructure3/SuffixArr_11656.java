@@ -12,13 +12,13 @@ public class SuffixArr_11656 {
 
     String[] suffixStrArr = new String[str.length()];
 
-    for (int i=0; i<suffixStrArr.length; i++) {
+    for (int i = 0; i < suffixStrArr.length; i++) {
       suffixStrArr[i] = str.substring(i, suffixStrArr.length);
     }
 
     Arrays.sort(suffixStrArr);
 
-    for (String v: suffixStrArr) {
+    for (String v : suffixStrArr) {
       System.out.println(v);
     }
   }
