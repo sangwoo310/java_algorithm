@@ -50,21 +50,20 @@ public class Sudoku_2580 {
 //
 //    sudoku(row + 1, 0);
 //  }
-
   public static boolean sudoku(int row, int col) {
     if (row == 9) {
       return true;
     }
 
     if (col == 9) {
-      return sudoku(row+1, 0);
+      return sudoku(row + 1, 0);
     }
 
     if (board[row][col] == 0) {
-      for (int candidateNum=1; candidateNum<=9; candidateNum++) {
+      for (int candidateNum = 1; candidateNum <= 9; candidateNum++) {
         if (isPromising(candidateNum, row, col)) {
           board[row][col] = candidateNum;
-          if (sudoku(row, col+1)) {
+          if (sudoku(row, col + 1)) {
             return true;
           }
           board[row][col] = 0;
@@ -72,7 +71,7 @@ public class Sudoku_2580 {
       }
       return false;
     } else {
-      return sudoku(row, col+1);
+      return sudoku(row, col + 1);
     }
   }
 

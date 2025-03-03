@@ -9,20 +9,20 @@ public class Fibonacci {
   static Integer[] f;
 
 
-  static int fib(int n){
+  static int fib(int n) {
     count++;
-    if(n <= 1){
+    if (n <= 1) {
       return n;
     }
-    return fib(n-1) + fib(n-2);
+    return fib(n - 1) + fib(n - 2);
   }
 
-  static int fib_dp_memoization(int n){
-    if(n <= 1){
+  static int fib_dp_memoization(int n) {
+    if (n <= 1) {
       return n;
     }
-    if(f[n] == null){
-      f[n] = fib_dp_memoization(n-1) + fib_dp_memoization(n-2);
+    if (f[n] == null) {
+      f[n] = fib_dp_memoization(n - 1) + fib_dp_memoization(n - 2);
       countDpMemoization++;
     }
 
@@ -32,11 +32,11 @@ public class Fibonacci {
   static int fib_dp_tabulation(int n) {
     if (n <= 1) return n;
 
-    int[] dp = new int[n+1];
+    int[] dp = new int[n + 1];
     dp[0] = 0;
     dp[1] = 1;
 
-    for(int i = 2; i <= n; i++) {
+    for (int i = 2; i <= n; i++) {
       dp[i] = dp[i - 1] + dp[i - 2];
       countDpTabulation++;
     }

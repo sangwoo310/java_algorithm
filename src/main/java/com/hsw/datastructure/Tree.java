@@ -4,7 +4,6 @@ import java.util.Queue;
 
 /**
  * Tree
- *
  */
 public class Tree {
   static BinaryTree<Integer> DummyBinaryTree() {

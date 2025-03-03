@@ -31,7 +31,7 @@ public class Coin_2293 {
     dp[0] = 1;
 
     for (int i = 0; i < N; i++) {
-      for (int j=coin[i]; j<=K; j++) {
+      for (int j = coin[i]; j <= K; j++) {
         System.out.println("i: " + i + ", j: " + j + ", dp[j] : " + dp[j]);
         dp[j] = dp[j] + dp[j - coin[i]];
       }
