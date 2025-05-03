@@ -49,7 +49,6 @@ public class DownHill_1520 {
           if ((board[i + 1][j] > board[i][j]) && (dp[i + 1][j] != 0)) path += dp[i + 1][j];
         }
         if (j - 1 >= 0) {
-
           if ((board[i][j - 1] > board[i][j]) && (dp[i][j - 1] != 0)) path += dp[i][j - 1];
         }
         if (j + 1 < col) {
